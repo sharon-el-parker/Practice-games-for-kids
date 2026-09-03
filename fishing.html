@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catch of the Day</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="fishing-page">
+    <main class="fishing-shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <a class="brand-mark home-link" href="index.html" aria-label="Back to arcade">+</a>
+          <div>
+            <p class="eyebrow">ARCADE / 002</p>
+            <h1>Catch of the Day</h1>
+          </div>
+        </div>
+        <div class="fishing-stats" aria-label="Game statistics">
+          <div class="stat"><span>Time</span><strong id="time-left">45</strong></div>
+          <div class="stat"><span>Caught</span><strong id="caught-count">00</strong></div>
+        </div>
+      </header>
+
+      <section class="fishing-layout">
+        <div class="fishing-scene-wrap">
+          <div class="board-meta"><span id="fishing-status">Ready to cast</span><span class="live-dot"></span></div>
+          <div class="scene-frame">
+            <canvas id="fishing-scene" width="760" height="520" aria-label="A person fishing from a boat"></canvas>
+            <div id="game-over-box" class="game-over-box" role="status" hidden>
+              <p class="eyebrow">ROUND COMPLETE</p>
+              <strong id="game-over-message"></strong>
+            </div>
+          </div>
+        </div>
+        <aside class="math-panel">
+          <div>
+            <p class="eyebrow">FISHING FOR FACTS</p>
+            <h2>Which answer<br /><em>will bite?</em></h2>
+            <div class="fact-box" aria-live="polite"><span id="first-number">1</span><b>+</b><span id="second-number">1</span><b>=</b><span>?</span></div>
+          </div>
+          <div id="answer-buttons" class="answer-buttons" aria-label="Choose the answer"></div>
+          <div class="fishing-actions">
+            <p class="eyebrow mode-label">CHOOSE ADDITION RANGE</p>
+            <div id="mode-buttons" class="mode-buttons" aria-label="Choose addition range">
+              <button class="mode-button" type="button" data-mode="1-4">Addition 1 to 4</button>
+              <button class="mode-button" type="button" data-mode="5-6">Addition 5 and 6</button>
+              <button class="mode-button" type="button" data-mode="7-8">Addition 7 and 8</button>
+              <button class="mode-button" type="button" data-mode="9-10">Addition 9 and 10</button>
+            </div>
+            <div class="high-scores" aria-label="High scores">
+              <div><span>Addition 1 to 4</span><strong id="high-score-1-4">00</strong></div>
+              <div><span>Addition 5 and 6</span><strong id="high-score-5-6">00</strong></div>
+              <div><span>Addition 7 and 8</span><strong id="high-score-7-8">00</strong></div>
+              <div><span>Addition 9 and 10</span><strong id="high-score-9-10">00</strong></div>
+            </div>
+            <a class="secondary-button home-button" href="index.html">Back to arcade <span>⌂</span></a>
+          </div>
+          <p class="tip"><span>RULE</span> Correct answers catch a fish. You have 45 seconds.</p>
+        </aside>
+      </section>
+      <section class="pail-row"><span class="pail-icon" aria-hidden="true">◒</span><span>Pail</span><strong id="pail-count">0 fish</strong></section>
+    </main>
+    <script src="fishing.js"></script>
+  </body>
+</html>

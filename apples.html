@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catching Apples</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="apples-page">
+    <main class="apples-shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <a class="brand-mark home-link" href="index.html" aria-label="Back to arcade">+</a>
+          <div>
+            <p class="eyebrow">ARCADE / 003</p>
+            <h1>Catching Apples</h1>
+          </div>
+        </div>
+        <div class="apples-stats" aria-label="Game statistics">
+          <div class="stat"><span>Time</span><strong id="apple-time">45</strong></div>
+          <div class="stat"><span>Caught</span><strong id="apple-score">00</strong></div>
+        </div>
+      </header>
+
+      <section class="apples-layout">
+        <div class="apples-scene-wrap">
+          <div class="board-meta"><span id="apple-status">Ready to catch</span><span class="live-dot"></span></div>
+          <div class="scene-frame">
+            <canvas id="apple-scene" width="760" height="520" aria-label="Catching apples game"></canvas>
+            <div id="apple-game-over-box" class="game-over-box" role="status" hidden>
+              <p class="eyebrow">ROUND COMPLETE</p>
+              <strong id="apple-game-over-message"></strong>
+            </div>
+          </div>
+          <div class="board-footer"><span>CATCH THE APPLES</span></div>
+        </div>
+        <aside class="apple-panel">
+          <div>
+            <p class="eyebrow">ORCHARD SHIFT</p>
+            <h2>Catch the<br /><em>right apple.</em></h2>
+            <p class="intro">Solve the multiplication fact before the person or the deer reaches the apple.</p>
+            <div class="fact-box" aria-live="polite"><span id="first-number">1</span><b>×</b><span id="second-number">1</span><b>=</b><span>?</span></div>
+          </div>
+          <div id="answer-buttons" class="answer-buttons" aria-label="Choose the answer"></div>
+          <div class="apple-controls" aria-label="Game controls">
+            <p class="eyebrow mode-label">CHOOSE MULTIPLICATION RANGE</p>
+            <div class="mode-buttons" aria-label="Choose multiplication range">
+              <button class="mode-button" type="button" data-mode="1-4">Multiplication 1 to 4</button>
+              <button class="mode-button" type="button" data-mode="5-6">Multiplication 5 and 6</button>
+              <button class="mode-button" type="button" data-mode="7-8">Multiplication 7 and 8</button>
+              <button class="mode-button" type="button" data-mode="9-10">Multiplication 9 and 10</button>
+            </div>
+            <div class="high-scores" aria-label="High scores">
+              <div><span>Multiplication 1 to 4</span><strong id="high-score-1-4">00</strong></div>
+              <div><span>Multiplication 5 and 6</span><strong id="high-score-5-6">00</strong></div>
+              <div><span>Multiplication 7 and 8</span><strong id="high-score-7-8">00</strong></div>
+              <div><span>Multiplication 9 and 10</span><strong id="high-score-9-10">00</strong></div>
+            </div>
+            <a class="secondary-button home-button" href="index.html">Back to arcade <span>⌂</span></a>
+          </div>
+        </aside>
+      </section>
+    </main>
+    <script src="apples.js"></script>
+  </body>
+</html>

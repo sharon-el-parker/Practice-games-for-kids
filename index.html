@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game1 Arcade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="hub-shell">
+      <header class="hub-header">
+        <div class="brand-lockup">
+          <span class="brand-mark" aria-hidden="true">+</span>
+          <div>
+            <p class="eyebrow">GAME1 / ARCADE</p>
+            <h1>Pick a game.</h1>
+          </div>
+        </div>
+        <p class="hub-count">03 PLAYABLE<br />MORE INCOMING</p>
+      </header>
+
+      <section class="hub-intro">
+        <p class="eyebrow">SELECT YOUR ADVENTURE</p>
+        <h2>A little<br /><em>something</em><br />to play.</h2>
+        <p class="intro">Quick games for small breaks, big scores, and the urge to press one more button.</p>
+      </section>
+
+      <section class="game-grid" aria-label="Available games">
+        <a class="game-card snake-card" href="snake.html">
+          <div class="card-art" aria-hidden="true"><span class="pixel-snake">●━━●</span><span class="pixel-food">●</span></div>
+          <div class="card-info"><p class="eyebrow">GAME / 001</p><h3>Neon Snake</h3><p>Guide, grow, repeat.</p></div>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="game-card fishing-card" href="fishing.html">
+          <div class="card-art fishing-art" aria-hidden="true"><span class="boat-art">⌁</span><span class="fish-art">◒</span></div>
+          <div class="card-info"><p class="eyebrow">GAME / 002</p><h3>Catch of the Day</h3><p>Solve facts. Catch fish.</p></div>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="game-card apple-card" href="apples.html">
+          <div class="card-art apple-art" aria-hidden="true"><span class="tree-art">♣</span><span class="apple-art-fruit">●</span></div>
+          <div class="card-info"><p class="eyebrow">GAME / 003</p><h3>Catching Apples</h3><p>Solve facts. Catch apples.</p></div>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </a>
+        <div class="game-card locked-card" aria-label="Next game coming soon">
+          <div class="card-art locked-art" aria-hidden="true">+</div>
+          <div class="card-info"><p class="eyebrow">GAME / 004</p><h3>Coming soon</h3><p>Another little challenge is taking shape.</p></div>
+          <span class="card-arrow muted" aria-hidden="true">—</span>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

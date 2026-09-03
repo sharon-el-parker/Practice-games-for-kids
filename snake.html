@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Snake</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <a class="brand-mark home-link" href="index.html" aria-label="Back to arcade">+</a>
+          <div>
+            <p class="eyebrow">ARCADE / 001</p>
+            <h1>Neon Snake</h1>
+          </div>
+        </div>
+        <div class="stats" aria-label="Game statistics">
+          <div class="stat"><span>Score</span><strong id="score">000</strong></div>
+          <div class="stat"><span>Best</span><strong id="best">000</strong></div>
+        </div>
+      </header>
+
+      <section class="play-layout">
+        <div class="board-wrap">
+          <div class="board-meta"><span id="status">Ready when you are</span><span class="live-dot"></span></div>
+          <canvas id="game-board" width="600" height="600" aria-label="Snake game board"></canvas>
+          <div class="board-footer"><span>WASD / ARROWS</span><span>SPACE TO PAUSE</span></div>
+        </div>
+
+        <aside class="control-panel">
+          <div>
+            <p class="eyebrow">HOW TO PLAY</p>
+            <h2>Eat. Grow.<br /><em>Don't collide.</em></h2>
+            <p class="intro">Guide the snake through the grid and collect bright fruit. Every bite makes your trail longer.</p>
+          </div>
+          <div class="controls" aria-label="Game controls">
+            <button id="start-button" class="primary-button" type="button">Start game <span>↗</span></button>
+            <button id="pause-button" class="secondary-button" type="button">Pause <span>Space</span></button>
+          </div>
+          <div class="d-pad" aria-label="Touch controls">
+            <button data-direction="up" class="up" type="button" aria-label="Move up">↑</button>
+            <button data-direction="left" type="button" aria-label="Move left">←</button>
+            <button data-direction="down" type="button" aria-label="Move down">↓</button>
+            <button data-direction="right" type="button" aria-label="Move right">→</button>
+          </div>
+          <p class="tip"><span>TIP</span> The longer you survive, the faster it gets.</p>
+        </aside>
+      </section>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
